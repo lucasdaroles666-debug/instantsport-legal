@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — InstantSport</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #0A1628 0%, #061C12 100%);
+    color: #FFFFFF;
+    min-height: 100vh;
+    line-height: 1.7;
+  }
+  .container { max-width: 820px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  header { text-align: center; margin-bottom: 40px; }
+  .logo-img { width: 48px; height: 48px; border-radius: 14px; box-shadow: 0 6px 20px rgba(34,197,94,0.3); }
+  .logo-row { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .logo-box {
+    width: 48px; height: 48px; border-radius: 14px;
+    background: linear-gradient(135deg, #22C55E, #16A34A);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 20px rgba(34,197,94,0.3);
+  }
+  .logo-text { font-size: 22px; font-weight: 900; color: #15803D; letter-spacing: -1px; }
+  .app-name { font-size: 28px; font-weight: 900; letter-spacing: -0.5px; }
+  .app-name .light { color: #FFFFFF; }
+  .app-name .accent { color: #22C55E; }
+
+  nav { display: flex; justify-content: center; gap: 8px; margin-bottom: 40px; flex-wrap: wrap; }
+  nav a {
+    padding: 10px 20px; border-radius: 12px; text-decoration: none;
+    color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 600;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.2s;
+  }
+  nav a:hover { background: rgba(34,197,94,0.1); color: #22C55E; border-color: rgba(34,197,94,0.3); }
+  nav a.active { background: rgba(34,197,94,0.15); color: #22C55E; border-color: rgba(34,197,94,0.3); }
+
+  .doc-header {
+    text-align: center; padding: 32px 0;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  h1 { font-size: 32px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; }
+  .subtitle { color: rgba(255,255,255,0.5); font-size: 14px; }
+
+  .tag {
+    display: inline-block;
+    background: rgba(34,197,94,0.12);
+    color: #22C55E;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
+
+  .intro {
+    background: rgba(34,197,94,0.06);
+    border: 1px solid rgba(34,197,94,0.2);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+  }
+  .intro strong { color: #22C55E; }
+
+  section { margin-bottom: 36px; }
+  h2 {
+    font-size: 18px; font-weight: 800; margin-bottom: 12px;
+    color: #FFFFFF;
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2::before {
+    content: "";
+    width: 3px; height: 20px;
+    background: #22C55E; border-radius: 2px;
+  }
+  h3 { font-size: 15px; font-weight: 700; margin: 16px 0 8px; color: rgba(255,255,255,0.9); }
+  p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 10px; }
+  ul { margin: 10px 0 10px 20px; color: rgba(255,255,255,0.75); font-size: 14px; }
+  li { margin-bottom: 6px; }
+  strong { color: #FFFFFF; font-weight: 600; }
+  a { color: #22C55E; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .data-table {
+    width: 100%;
+    margin: 16px 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .data-table th, .data-table td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .data-table th {
+    background: rgba(34,197,94,0.1);
+    color: #22C55E;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .data-table td { color: rgba(255,255,255,0.75); }
+  .data-table tr:last-child td { border-bottom: none; }
+
+  .info-box {
+    background: rgba(59,130,246,0.08);
+    border: 1px solid rgba(59,130,246,0.25);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+  }
+  .info-box strong { color: #3B82F6; }
+
+  .highlight-box {
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.25);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+  }
+  .highlight-box strong { color: #EF4444; }
+
+  .rights-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px; margin: 16px 0;
+  }
+  @media (max-width: 640px) { .rights-grid { grid-template-columns: 1fr; } }
+  .right-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 14px;
+  }
+  .right-card strong { display: block; color: #22C55E; margin-bottom: 4px; font-size: 13px; }
+  .right-card span { font-size: 13px; color: rgba(255,255,255,0.7); }
+
+  footer {
+    margin-top: 64px; padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    text-align: center; color: rgba(255,255,255,0.3); font-size: 12px;
+  }
+  footer a { color: rgba(255,255,255,0.5); }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a href="index.html" style="text-decoration: none;">
+      <div class="logo-row">
+        <img src="icon.png" alt="InstantSport" class="logo-img" />
+        <div class="app-name"><span class="light">Instant</span><span class="accent">Sport</span></div>
+      </div>
+    </a>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="cgu.html">CGU</a>
+    <a href="privacy.html" class="active">Confidentialité</a>
+  </nav>
+
+  <div class="doc-header">
+    <span class="tag">RGPD · VIE PRIVÉE</span>
+    <h1>Politique de confidentialité</h1>
+    <p class="subtitle">Version en vigueur · Dernière mise à jour : 23 avril 2026</p>
+  </div>
+
+  <div class="intro">
+    Chez <strong>InstantSport</strong>, nous attachons une grande importance à la protection de tes données personnelles. Cette politique explique clairement <strong>quelles données nous collectons</strong>, <strong>pourquoi</strong>, <strong>comment</strong> nous les utilisons, et quels sont tes <strong>droits</strong> conformément au Règlement Général sur la Protection des Données (RGPD).
+  </div>
+
+  <section>
+    <h2>1. Responsable du traitement</h2>
+    <p>Le responsable du traitement des données est <strong>InstantSport</strong>, joignable à l'adresse <a href="mailto:instantsport.contact@gmail.com">instantsport.contact@gmail.com</a>.</p>
+  </section>
+
+  <section>
+    <h2>2. Données collectées</h2>
+    <p>Nous collectons uniquement les données nécessaires au bon fonctionnement du service :</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>Données</th>
+          <th>Finalité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Identification</strong></td>
+          <td>Email, pseudo, photo de profil</td>
+          <td>Création de compte, affichage dans le feed</td>
+        </tr>
+        <tr>
+          <td><strong>Activité</strong></td>
+          <td>Pronostics, combinés, scores, crédits, miles</td>
+          <td>Fonctionnement du jeu</td>
+        </tr>
+        <tr>
+          <td><strong>Social</strong></td>
+          <td>Messages privés, chat général, commentaires, likes, réactions</td>
+          <td>Fonctionnalités communautaires</td>
+        </tr>
+        <tr>
+          <td><strong>Technique</strong></td>
+          <td>Token push Expo, adresse IP, type d'appareil, date/heure connexion</td>
+          <td>Sécurité, notifications, statistiques d'usage</td>
+        </tr>
+        <tr>
+          <td><strong>Parrainage</strong></td>
+          <td>Code de parrainage, filleuls</td>
+          <td>Système de récompenses</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box">
+      <strong>Ce que nous NE collectons PAS :</strong> nous ne collectons aucune donnée financière (carte bancaire, RIB), aucune donnée biométrique, aucune donnée de santé, et ne traçons pas votre géolocalisation.
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Finalités et base légale</h2>
+    <p>Vos données sont traitées pour les finalités suivantes, conformément au RGPD :</p>
+    <ul>
+      <li><strong>Exécution du contrat</strong> (art. 6.1.b RGPD) : création de compte, fonctionnement du jeu, messagerie</li>
+      <li><strong>Consentement</strong> (art. 6.1.a RGPD) : envoi de notifications push, parrainage</li>
+      <li><strong>Intérêt légitime</strong> (art. 6.1.f RGPD) : sécurité, prévention de la fraude, amélioration du service</li>
+      <li><strong>Obligation légale</strong> (art. 6.1.c RGPD) : réponse aux autorités compétentes si requis</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Destinataires de vos données</h2>
+    <p>Vos données sont partagées avec les prestataires techniques suivants, strictement nécessaires au fonctionnement du service :</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Prestataire</th>
+          <th>Rôle</th>
+          <th>Données concernées</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Supabase</strong></td>
+          <td>Hébergement base de données et authentification</td>
+          <td>Toutes les données de compte et d'activité</td>
+        </tr>
+        <tr>
+          <td><strong>Expo</strong></td>
+          <td>Envoi des notifications push</td>
+          <td>Token push, titre et contenu de la notification</td>
+        </tr>
+        <tr>
+          <td><strong>Apple</strong></td>
+          <td>Distribution App Store et paiements (futurs)</td>
+          <td>Selon les conditions Apple</td>
+        </tr>
+        <tr>
+          <td><strong>API-Football</strong></td>
+          <td>Fourniture des données sportives</td>
+          <td>Aucune donnée personnelle (uniquement les IDs matchs)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top: 16px;"><strong>Vos données ne sont jamais vendues ni cédées à des tiers à des fins commerciales ou publicitaires.</strong></p>
+  </section>
+
+  <section>
+    <h2>5. Transfert hors Union Européenne</h2>
+    <div class="info-box">
+      <strong>Note RGPD :</strong> nos prestataires techniques (Supabase, Expo, Apple) peuvent stocker ou traiter vos données dans des pays en dehors de l'Union Européenne, notamment aux États-Unis.
+    </div>
+    <p>Ces transferts sont encadrés par :</p>
+    <ul>
+      <li>Les clauses contractuelles types approuvées par la Commission Européenne</li>
+      <li>L'adhésion des prestataires au Data Privacy Framework (accord UE-US)</li>
+      <li>Les garanties techniques de chiffrement et sécurité mises en place par les prestataires</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Durée de conservation</h2>
+    <ul>
+      <li><strong>Données de compte :</strong> conservées pendant toute la durée d'utilisation du service</li>
+      <li><strong>Après suppression du compte :</strong> les données sont supprimées dans un délai de 30 jours (sauf obligation légale de conservation)</li>
+      <li><strong>Compte inactif :</strong> après 3 ans sans connexion, le compte est automatiquement supprimé après notification par email</li>
+      <li><strong>Messages et contenus :</strong> conservés tant qu'ils ne sont pas supprimés par l'utilisateur</li>
+      <li><strong>Logs de sécurité :</strong> conservés 12 mois maximum</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Vos droits (RGPD)</h2>
+    <p>Conformément au RGPD, tu disposes des droits suivants sur tes données personnelles :</p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <strong>🔍 Droit d'accès</strong>
+        <span>Obtenir une copie de tes données</span>
+      </div>
+      <div class="right-card">
+        <strong>✏️ Droit de rectification</strong>
+        <span>Corriger des données inexactes</span>
+      </div>
+      <div class="right-card">
+        <strong>🗑️ Droit à l'effacement</strong>
+        <span>Demander la suppression ("droit à l'oubli")</span>
+      </div>
+      <div class="right-card">
+        <strong>📦 Droit à la portabilité</strong>
+        <span>Récupérer tes données dans un format lisible</span>
+      </div>
+      <div class="right-card">
+        <strong>🚫 Droit d'opposition</strong>
+        <span>Refuser un traitement de tes données</span>
+      </div>
+      <div class="right-card">
+        <strong>⏸️ Droit de limitation</strong>
+        <span>Geler temporairement un traitement</span>
+      </div>
+    </div>
+
+    <p><strong>Pour exercer tes droits :</strong> envoie un email à <a href="mailto:instantsport.contact@gmail.com">instantsport.contact@gmail.com</a> avec comme objet "Demande RGPD" en précisant la nature de ta demande. Nous répondons sous <strong>30 jours maximum</strong>.</p>
+
+    <p style="margin-top: 12px;"><strong>Droit de réclamation :</strong> si tu estimes que tes droits ne sont pas respectés, tu peux adresser une réclamation à la CNIL : <a href="https://www.cnil.fr/fr/plaintes" target="_blank">cnil.fr/fr/plaintes</a>.</p>
+  </section>
+
+  <section>
+    <h2>8. Suppression de compte</h2>
+    <p>Tu peux supprimer ton compte InstantSport à tout moment :</p>
+    <ul>
+      <li><strong>Dans l'application</strong> : Réglages → Compte → Supprimer mon compte</li>
+      <li><strong>Par email</strong> : demande à <a href="mailto:instantsport.contact@gmail.com">instantsport.contact@gmail.com</a></li>
+    </ul>
+    <div class="highlight-box">
+      <strong>Attention :</strong> la suppression est définitive. Toutes tes données, crédits, miles, badges, posts et messages seront effacés de manière irréversible sous 30 jours.
+    </div>
+  </section>
+
+  <section>
+    <h2>9. Sécurité des données</h2>
+    <p>Nous mettons en œuvre des mesures techniques et organisationnelles adaptées pour protéger tes données :</p>
+    <ul>
+      <li>Chiffrement des mots de passe (bcrypt via Supabase Auth)</li>
+      <li>Chiffrement HTTPS/TLS de toutes les communications</li>
+      <li>Politiques RLS (Row Level Security) en base de données</li>
+      <li>Rate limiting pour prévenir les attaques par force brute</li>
+      <li>Audits réguliers de sécurité</li>
+      <li>Sauvegardes automatiques journalières</li>
+    </ul>
+    <p><strong>Incident de sécurité :</strong> en cas de violation de données affectant tes droits et libertés, nous te notifierons sous <strong>72 heures maximum</strong> conformément à l'article 34 RGPD.</p>
+  </section>
+
+  <section>
+    <h2>10. Notifications push</h2>
+    <p>InstantSport utilise les notifications push via le service Expo pour vous informer de :</p>
+    <ul>
+      <li>Résultats de vos pronostics (gains, pertes)</li>
+      <li>Buts marqués dans les matchs où vous avez parié</li>
+      <li>Messages reçus (privés, commentaires, mentions)</li>
+      <li>Coup d'envoi des matchs</li>
+      <li>Nouveautés et bonus quotidiens</li>
+    </ul>
+    <p>Tu peux désactiver les notifications à tout moment dans les réglages iOS de ton appareil.</p>
+  </section>
+
+  <section>
+    <h2>11. Mineurs</h2>
+    <p>InstantSport est accessible aux personnes âgées de <strong>13 ans et plus</strong>. Pour les utilisateurs de <strong>13 à 15 ans</strong>, le consentement d'un responsable légal est requis conformément à la loi française et au RGPD.</p>
+    <p>Si tu es parent ou responsable légal et penses que ton enfant a créé un compte sans ton consentement, contacte-nous à <a href="mailto:instantsport.contact@gmail.com">instantsport.contact@gmail.com</a> pour une suppression immédiate.</p>
+  </section>
+
+  <section>
+    <h2>12. Cookies et stockage local</h2>
+    <p>L'application mobile n'utilise <strong>pas de cookies publicitaires</strong>. Elle utilise uniquement le stockage local (AsyncStorage sur iOS) pour :</p>
+    <ul>
+      <li>Mémoriser ta session de connexion</li>
+      <li>Stocker tes préférences (notifications, thème)</li>
+      <li>Optimiser les performances (mise en cache)</li>
+    </ul>
+    <p>Ces données restent sur ton appareil et ne sont pas transmises à des tiers.</p>
+  </section>
+
+  <section>
+    <h2>13. Modifications de la politique</h2>
+    <p>Nous nous réservons le droit de modifier la présente politique pour refléter les évolutions de la loi ou du service. Toute modification substantielle sera notifiée :</p>
+    <ul>
+      <li>Par notification push dans l'application</li>
+      <li>Par email aux utilisateurs actifs</li>
+      <li>Par affichage d'un bandeau dans l'application</li>
+    </ul>
+    <p>La date de dernière mise à jour est indiquée en haut de cette page.</p>
+  </section>
+
+  <div class="info-box" style="margin-top: 40px;">
+    <strong>Une question sur tes données ?</strong> Notre délégué à la protection des données répond à toutes tes demandes à <a href="mailto:instantsport.contact@gmail.com">instantsport.contact@gmail.com</a>. Réponse garantie sous 7 jours.
+  </div>
+
+  <footer>
+    <p>© 2026 InstantSport — Tous droits réservés</p>
+    <p style="margin-top: 4px;"><a href="index.html">Accueil</a> · <a href="cgu.html">Conditions générales</a></p>
+  </footer>
+</div>
+</body>
+</html>
