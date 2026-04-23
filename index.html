@@ -6,29 +6,23 @@
 <title>InstantSport — Mentions légales</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { min-height: 100vh; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: linear-gradient(135deg, #0A1628 0%, #061C12 100%);
+    background-attachment: fixed;
     color: #FFFFFF;
-    min-height: 100vh;
     line-height: 1.6;
   }
   .container { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
 
   header { text-align: center; margin-bottom: 48px; }
-  .logo-img { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 6px 20px rgba(34,197,94,0.3); }
-  .logo-row { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; }
-  .logo-box {
-    width: 56px; height: 56px; border-radius: 16px;
-    background: linear-gradient(135deg, #22C55E, #16A34A);
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 8px 24px rgba(34,197,94,0.3);
-  }
-  .logo-text { font-size: 28px; font-weight: 900; color: #15803D; letter-spacing: -1px; }
-  .app-name { font-size: 36px; font-weight: 900; letter-spacing: -1px; }
+  .logo-row { display: inline-flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+  .logo-img { width: 56px; height: 56px; border-radius: 16px; box-shadow: 0 8px 24px rgba(34,197,94,0.3); }
+  .header-text { text-align: left; }
+  .app-name { font-size: 36px; font-weight: 900; letter-spacing: -1px; line-height: 1.1; }
   .app-name .light { color: #FFFFFF; }
   .app-name .accent { color: #22C55E; }
-
   .tagline { color: rgba(255,255,255,0.5); font-size: 14px; margin-top: 4px; }
 
   nav { display: flex; justify-content: center; gap: 8px; margin-bottom: 48px; flex-wrap: wrap; }
@@ -104,7 +98,7 @@
   <header>
     <div class="logo-row">
       <img src="icon.png" alt="InstantSport" class="logo-img" />
-      <div>
+      <div class="header-text">
         <div class="app-name"><span class="light">Instant</span><span class="accent">Sport</span></div>
         <div class="tagline">Paris sportifs virtuels · 100% gratuit</div>
       </div>
